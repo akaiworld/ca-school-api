@@ -248,8 +248,9 @@ Unique fields are checked and duplicates are prevented to be saved to the databa
 App uses MongoDB, ca database.
 
 To run with docker clone the repository and run:
-docker-compose build
-docker-compose run --publish 80:8080 web
+
+	docker-compose build
+	docker-compose run --publish 80:8080 web
 
 
 
