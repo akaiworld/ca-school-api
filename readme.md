@@ -120,7 +120,11 @@ Data is validated via mongoose built in validators as well as customs ones(email
 All the endpoints return corresponding statuses(200,400,404,500) according to the result.
 Unique fields are checked and duplicates are prevented to be saved to the database.
 
+App uses MongoDB, ca database.
 
+To run with docker clone the repository and run:
+docker-compose build
+docker-compose run --publish 80:8080 web
 
 
 
