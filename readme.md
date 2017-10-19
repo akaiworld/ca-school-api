@@ -14,10 +14,10 @@ Project structure
 			init.js - init all db modules
 			db-connector.js - prepare the db connection
 			counter.js - create numeric ids for other collections
+			user.js - for authorization
 			
 			/school-api - school related api
 				init.js - init all related modules
-				users.js - for authorization
 				basic-crud.js - basic CRUD operations abscraction
 				person.js - CRUD abstraction for student and teacher
 				student.js
