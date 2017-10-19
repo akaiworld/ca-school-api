@@ -44,76 +44,76 @@ Content-Type must be application/json
 
 Api endpoints(with body examples):
 
-TEACHERS
-POST http://localhost/teacher
-{
-	"first_name": "Mike",
-	"last_name": "Tyson",
-	"email": "mike@gmail.com" - must be unique
-}
-GET http://localhost/teacher/TEACHER_ID
-PUT http://localhost/teacher/TEACHER_ID
-{
-	"first_name": "Mike",
-	"last_name": "Tyson",
-	"email": "mike-2@gmail.com" - must be unique
-}
-DELETE http://localhost/teacher/TEACHER_ID
-
-
-STUDENTS
-POST http://localhost/student
-{
-	"first_name": "Floyd",
-	"last_name": "Mayweather",
-	"email": "floyd@gmail.com" - must be unique
-}
-GET http://localhost/student/STUDENT_ID
-PUT http://localhost/student/STUDENT_ID
-{
-	"first_name": "Floyd",
-	"last_name": "Mayweather",
-	"email": "floyd-2@gmail.com" - must be unique
-}
-DELETE http://localhost/student/STUDENT_ID
-
-
-COURSES
-POST http://localhost/course
-{
-	"teacher_id": TEACHER_ID,
-	"name": "Boxing" - must be unique
-}
-GET http://localhost/course/COURSE_ID
-PUT http://localhost/course/COURSE_ID
-{
-	"teacher_id": TEACHER_ID,
-	"name": "Boxing" - must be unique
-}
-DELETE http://localhost/course/COURSE_ID
-PUT http://localhost/course/COURSE_ID/student/STUDENT_ID
-DELETE http://localhost/course/COURSE_ID/student/STUDENT_ID
-
-
-GRADES
-POST http://localhost/grade
-{
-	course_id: COURSE_ID,
-	student_id: STUDENT_ID,
-	grade: 5,
-}
-GET http://localhost/grade/course-COURSE_ID/student-STUDENT_ID
-PUT http://localhost/grade/course-COURSE_ID/student-STUDENT_ID
-{
-	grade: 5,
-}
-DELETE http://localhost/grade/course-COURSE_ID/student-STUDENT_ID
-
-
-AGGREGATION
-GET http://localhost/top-teacher
-GET http://localhost/top-student
-GET http://localhost/easiest-course
+	TEACHERS
+		POST http://localhost/teacher
+		{
+			"first_name": "Mike",
+			"last_name": "Tyson",
+			"email": "mike@gmail.com" - must be unique
+		}
+		GET http://localhost/teacher/TEACHER_ID
+		PUT http://localhost/teacher/TEACHER_ID
+		{
+			"first_name": "Mike",
+			"last_name": "Tyson",
+			"email": "mike-2@gmail.com" - must be unique
+		}
+		DELETE http://localhost/teacher/TEACHER_ID
+	
+	
+	STUDENTS
+		POST http://localhost/student
+		{
+			"first_name": "Floyd",
+			"last_name": "Mayweather",
+			"email": "floyd@gmail.com" - must be unique
+		}
+		GET http://localhost/student/STUDENT_ID
+		PUT http://localhost/student/STUDENT_ID
+		{
+			"first_name": "Floyd",
+			"last_name": "Mayweather",
+			"email": "floyd-2@gmail.com" - must be unique
+		}
+		DELETE http://localhost/student/STUDENT_ID
+	
+	
+	COURSES
+		POST http://localhost/course
+		{
+			"teacher_id": TEACHER_ID,
+			"name": "Boxing" - must be unique
+		}
+		GET http://localhost/course/COURSE_ID
+		PUT http://localhost/course/COURSE_ID
+		{
+			"teacher_id": TEACHER_ID,
+			"name": "Boxing" - must be unique
+		}
+		DELETE http://localhost/course/COURSE_ID
+		PUT http://localhost/course/COURSE_ID/student/STUDENT_ID
+		DELETE http://localhost/course/COURSE_ID/student/STUDENT_ID
+	
+	
+	GRADES
+		POST http://localhost/grade
+		{
+			course_id: COURSE_ID,
+			student_id: STUDENT_ID,
+			grade: 5,
+		}
+		GET http://localhost/grade/course-COURSE_ID/student-STUDENT_ID
+		PUT http://localhost/grade/course-COURSE_ID/student-STUDENT_ID
+		{
+			grade: 5,
+		}
+		DELETE http://localhost/grade/course-COURSE_ID/student-STUDENT_ID
+	
+	
+	AGGREGATION
+		GET http://localhost/top-teacher
+		GET http://localhost/top-student
+		GET http://localhost/easiest-course
 
 
 Data is validated via mongoose built in validators as well as customs ones(email validator).
