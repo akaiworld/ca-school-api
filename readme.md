@@ -26,19 +26,19 @@ Project structure
 				grade.js
 
 		
-App logic
+App logic.
 There are several predefined users with their access tokens:
-aI1i5w0_802o6A4X6X7a0M1D8I9
-am1a5w0_8Q4q0E3M2U2_0S6N0R5
-a61G5k0J8B4U0K36212185177b0
-ae185I0W8s4X0m3T294C7w828t3
-a81V5G0Z8C4v0p3n2O5E501y3C0
+	aI1i5w0_802o6A4X6X7a0M1D8I9
+	am1a5w0_8Q4q0E3M2U2_0S6N0R5
+	a61G5k0J8B4U0K36212185177b0
+	ae185I0W8s4X0m3T294C7w828t3
+	a81V5G0Z8C4v0p3n2O5E501y3C0
 
 The user has to pass a valid access token in order to perform requests.
 Requests from each user (by cookies for now) can be made only once per second.
 Each user has access to all teachers, students, cources and grades.
 
-Objects are interconnected. This means for example that if a student is removed, his grades are removed and courses his was in are updated.  
+Objects are interconnected. This means for example that if a student is removed, his grades are removed and courses he was in are updated.  
 
 Content-Type must be application/json
 
