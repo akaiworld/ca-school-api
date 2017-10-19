@@ -46,75 +46,199 @@ Content-Type must be application/json
 Api endpoints(with body examples):
 
 	TEACHERS
+	
 		POST http://localhost/teacher
-		{
-			"first_name": "Mike",
-			"last_name": "Tyson",
-			"email": "mike@gmail.com" - must be unique
-		}
+			{
+				"first_name": "Mike",
+				"last_name": "Tyson",
+				"email": "mike@gmail.com" - must be unique
+			}
+			on success returns:
+			{
+				first_name, 
+				last_name,
+				email,
+				id,
+			}
+			
 		GET http://localhost/teacher/TEACHER_ID
+			on success returns:
+			{
+				first_name, 
+				last_name,
+				email,
+				id,
+			}
+			
 		PUT http://localhost/teacher/TEACHER_ID
-		{
-			"first_name": "Mike",
-			"last_name": "Tyson",
-			"email": "mike-2@gmail.com" - must be unique
-		}
+			{
+				"first_name": "Mike",
+				"last_name": "Tyson",
+				"email": "mike-2@gmail.com" - must be unique
+			}
+			on success returns:
+			{
+				success: true
+			}
+			
 		DELETE http://localhost/teacher/TEACHER_ID
+			on success returns:
+			{
+				success: true
+			}
 	
 	
 	STUDENTS
+	
 		POST http://localhost/student
-		{
-			"first_name": "Floyd",
-			"last_name": "Mayweather",
-			"email": "floyd@gmail.com" - must be unique
-		}
+			{
+				"first_name": "Floyd",
+				"last_name": "Mayweather",
+				"email": "floyd@gmail.com" - must be unique
+			}
+			on success returns:
+			{
+				first_name, 
+				last_name,
+				email,
+				id,
+			}
+			
 		GET http://localhost/student/STUDENT_ID
+			on success returns:
+			{
+				first_name, 
+				last_name,
+				email,
+				id,
+			}
+			
 		PUT http://localhost/student/STUDENT_ID
-		{
-			"first_name": "Floyd",
-			"last_name": "Mayweather",
-			"email": "floyd-2@gmail.com" - must be unique
-		}
+			{
+				"first_name": "Floyd",
+				"last_name": "Mayweather",
+				"email": "floyd-2@gmail.com" - must be unique
+			}
+			on success returns:
+			{
+				success: true
+			}
+			
 		DELETE http://localhost/student/STUDENT_ID
+			on success returns:
+			{
+				success: true
+			}
 	
 	
 	COURSES
 		POST http://localhost/course
-		{
-			"teacher_id": TEACHER_ID,
-			"name": "Boxing" - must be unique
-		}
+			{
+				"teacher_id": TEACHER_ID,
+				"name": "Boxing" - must be unique
+			}
+			on success returns:
+			{
+				id,
+				teacher_id,
+				name,
+				students, - array of student ids
+			}
+			
 		GET http://localhost/course/COURSE_ID
+			on success returns:
+			{
+				id,
+				teacher_id,
+				name,
+				students, - array of student ids
+			}
+			
 		PUT http://localhost/course/COURSE_ID
-		{
-			"teacher_id": TEACHER_ID,
-			"name": "Boxing" - must be unique
-		}
+			{
+				"teacher_id": TEACHER_ID,
+				"name": "Boxing" - must be unique
+			}
+			on success returns:
+			{
+				success: true
+			}
+			
 		DELETE http://localhost/course/COURSE_ID
+			on success returns:
+			{
+				success: true
+			}
+			
 		PUT http://localhost/course/COURSE_ID/student/STUDENT_ID
+			on success returns:
+			{
+				success: true
+			}
+			
 		DELETE http://localhost/course/COURSE_ID/student/STUDENT_ID
+			on success returns:
+			{
+				success: true
+			}
 	
 	
 	GRADES
 		POST http://localhost/grade
-		{
-			course_id: COURSE_ID,
-			student_id: STUDENT_ID,
-			grade: 5,
-		}
+			{
+				course_id: COURSE_ID,
+				student_id: STUDENT_ID,
+				grade: 5,
+			}
+			on success returns:
+			{
+				course_id,
+				student_id,
+				grade,
+			}
+			
 		GET http://localhost/grade/course-COURSE_ID/student-STUDENT_ID
+			on success returns:
+			{
+				course_id,
+				student_id,
+				grade,
+			}
+			
 		PUT http://localhost/grade/course-COURSE_ID/student-STUDENT_ID
-		{
-			grade: 5,
-		}
+			{
+				grade: 5,
+			}
+			on success returns:
+			{
+				success: true
+			}
+			
 		DELETE http://localhost/grade/course-COURSE_ID/student-STUDENT_ID
+			on success returns:
+			{
+				success: true
+			}
 	
 	
 	AGGREGATION
 		GET http://localhost/top-teacher
+			on success returns:
+			{
+				teacher_id,
+			}
+		
 		GET http://localhost/top-student
+			on success returns:
+			{
+				student_id,
+			}
+			
 		GET http://localhost/easiest-course
+			on success returns:
+			{
+				course_id,
+			}
 
 
 Data is validated via mongoose built in validators as well as customs ones(email validator).
