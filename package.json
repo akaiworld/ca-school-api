@@ -1,0 +1,21 @@
+{
+  "name": "CA",
+  "version": "0.1.0",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
+    "cookies": "^0.7.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.1",
+    "helmet": "^3.9.0",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.12.3",
+    "passport": "^0.4.0",
+    "passport-http-bearer": "^1.0.1",
+    "validator": "^9.0.0"
+  },
+  "main": "./src/index.js",
+  "scripts": {
+	  "start": "node ./src/index.js"
+  }
+}

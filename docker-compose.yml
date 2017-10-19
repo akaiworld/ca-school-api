@@ -1,0 +1,17 @@
+db:
+  image: mongo
+  volumes:
+    - ./data:/data/db
+  ports:
+    - "27017:27017"
+web:
+  build: .
+  command: node ./src/index.js
+  volumes:
+    - .:/ca-school-api
+  ports:
+    - "8080:8080"
+  links:
+    - db
+  environment:
+    PORT: 8080 # this is optional, allows express to use process.env.PORT instead
