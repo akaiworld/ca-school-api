@@ -27,7 +27,8 @@ Project structure
 
 		
 App logic.
-There are several predefined users with their access tokens:
+There are several predefined users with their BEARER tokens:
+
 	aI1i5w0_802o6A4X6X7a0M1D8I9
 	am1a5w0_8Q4q0E3M2U2_0S6N0R5
 	a61G5k0J8B4U0K36212185177b0
